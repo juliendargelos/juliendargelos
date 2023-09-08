@@ -59,7 +59,7 @@
 
   <defs>
     <symbol id="wave">
-      <image href="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTEiIGhlaWdodD0iNiIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48dGV4dCB4PSIxIiB5PSI3IiBmb250LXNpemU9IjE2cHgiIGZpbGw9IiNhYWEiPn48L3RleHQ+PC9zdmc+Cg==" x="0" y="0" width="11" height="6"/>
+      <image href="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTEiIGhlaWdodD0iNiIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48dGV4dCB4PSIxIiB5PSI3IiBmb250LXNpemU9IjE2cHgiIGZvbnQtZmFtaWx5PSJDb3VyaWVyIE5ldywgbW9ub3NwYWNlIiBmaWxsPSIjYWFhIj5+PC90ZXh0Pjwvc3ZnPgo=" x="0" y="0" width="11" height="6"/>
     </symbol>
   </defs>
   
