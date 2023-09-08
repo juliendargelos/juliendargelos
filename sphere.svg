@@ -1,0 +1,468 @@
+<svg
+  width="192"
+  height="192"
+  version="1.1"
+  xmlns="http://www.w3.org/2000/svg"
+>
+  <style>
+    /* <![CDATA[ */
+    @property --t {
+      syntax: "<number>";
+      inherits: true;
+      initial-value: 0;
+    }
+
+    g {
+      --pi: 3.1415926536;
+      --pi2: 6.2831853072;
+      --r: 90;
+      --viewport: 192px;
+      --width: 11px;
+      --height: 6px;
+      --theta: 0.4;
+      --cos-theta: cos(var(--theta));
+      --sin-theta: sin(var(--theta));
+      --cx: calc((var(--viewport) - var(--width) / 2) / 2);
+      --cy: calc((var(--viewport) - var(--height) / 2) / 2);
+      animation: t 20s infinite linear;
+    }
+
+    use {
+      --a: calc(var(--la) * var(--pi2));
+      --b: calc((var(--lo) + var(--t)) * var(--pi2));
+      --x: calc(cos(var(--a)) * cos(var(--b)));
+      --y: sin(var(--a));
+      --z: calc(cos(var(--a)) * sin(var(--b)));
+      --ry: calc(var(--cos-theta) * var(--y) - var(--sin-theta) * var(--z));
+      --rz: calc(var(--sin-theta) * var(--y) - var(--cos-theta) * var(--z));
+      --s: calc((var(--z) * -0.5 + 0.5));
+      
+      opacity: var(--s);
+      transform: translate3d(
+        calc(var(--r) * var(--x) * 1px + var(--cx)),
+        calc(var(--r) * var(--ry) * 1px + var(--cy)),
+        0
+      ) scale(var(--s));
+    }
+
+    @keyframes t {
+      from {
+        --t: 0;
+      }
+      
+      to {
+        --t: 1;
+      }
+    }
+    /* ]]> */
+  </style>
+
+  <defs>
+    <symbol id="wave">
+      <image href="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTEiIGhlaWdodD0iNiIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48dGV4dCB4PSIxIiB5PSI3IiBmb250LXNpemU9IjE2cHgiIGZpbGw9IiNhYWEiPn48L3RleHQ+PC9zdmc+Cg==" x="0" y="0" width="11" height="6"/>
+    </symbol>
+  </defs>
+  
+  <g>
+    <use href="#wave" style="--la:0;--lo:0"/>
+    <use href="#wave" style="--la:0;--lo:.05263157894736842"/>
+    <use href="#wave" style="--la:0;--lo:.10526315789473684"/>
+    <use href="#wave" style="--la:0;--lo:.15789473684210525"/>
+    <use href="#wave" style="--la:0;--lo:.21052631578947367"/>
+    <use href="#wave" style="--la:0;--lo:.2631578947368421"/>
+    <use href="#wave" style="--la:0;--lo:.3157894736842105"/>
+    <use href="#wave" style="--la:0;--lo:.3684210526315789"/>
+    <use href="#wave" style="--la:0;--lo:.42105263157894735"/>
+    <use href="#wave" style="--la:0;--lo:.47368421052631576"/>
+    <use href="#wave" style="--la:0;--lo:.5263157894736842"/>
+    <use href="#wave" style="--la:0;--lo:.5789473684210527"/>
+    <use href="#wave" style="--la:0;--lo:.631578947368421"/>
+    <use href="#wave" style="--la:0;--lo:.6842105263157895"/>
+    <use href="#wave" style="--la:0;--lo:.7368421052631579"/>
+    <use href="#wave" style="--la:0;--lo:.7894736842105263"/>
+    <use href="#wave" style="--la:0;--lo:.8421052631578947"/>
+    <use href="#wave" style="--la:0;--lo:.8947368421052632"/>
+    <use href="#wave" style="--la:0;--lo:.9473684210526315"/>
+    <use href="#wave" style="--la:0;--lo:1"/>
+    <use href="#wave" style="--la:.05263157894736842;--lo:0"/>
+    <use href="#wave" style="--la:.05263157894736842;--lo:.05263157894736842"/>
+    <use href="#wave" style="--la:.05263157894736842;--lo:.10526315789473684"/>
+    <use href="#wave" style="--la:.05263157894736842;--lo:.15789473684210525"/>
+    <use href="#wave" style="--la:.05263157894736842;--lo:.21052631578947367"/>
+    <use href="#wave" style="--la:.05263157894736842;--lo:.2631578947368421"/>
+    <use href="#wave" style="--la:.05263157894736842;--lo:.3157894736842105"/>
+    <use href="#wave" style="--la:.05263157894736842;--lo:.3684210526315789"/>
+    <use href="#wave" style="--la:.05263157894736842;--lo:.42105263157894735"/>
+    <use href="#wave" style="--la:.05263157894736842;--lo:.47368421052631576"/>
+    <use href="#wave" style="--la:.05263157894736842;--lo:.5263157894736842"/>
+    <use href="#wave" style="--la:.05263157894736842;--lo:.5789473684210527"/>
+    <use href="#wave" style="--la:.05263157894736842;--lo:.631578947368421"/>
+    <use href="#wave" style="--la:.05263157894736842;--lo:.6842105263157895"/>
+    <use href="#wave" style="--la:.05263157894736842;--lo:.7368421052631579"/>
+    <use href="#wave" style="--la:.05263157894736842;--lo:.7894736842105263"/>
+    <use href="#wave" style="--la:.05263157894736842;--lo:.8421052631578947"/>
+    <use href="#wave" style="--la:.05263157894736842;--lo:.8947368421052632"/>
+    <use href="#wave" style="--la:.05263157894736842;--lo:.9473684210526315"/>
+    <use href="#wave" style="--la:.05263157894736842;--lo:1"/>
+    <use href="#wave" style="--la:.10526315789473684;--lo:0"/>
+    <use href="#wave" style="--la:.10526315789473684;--lo:.05263157894736842"/>
+    <use href="#wave" style="--la:.10526315789473684;--lo:.10526315789473684"/>
+    <use href="#wave" style="--la:.10526315789473684;--lo:.15789473684210525"/>
+    <use href="#wave" style="--la:.10526315789473684;--lo:.21052631578947367"/>
+    <use href="#wave" style="--la:.10526315789473684;--lo:.2631578947368421"/>
+    <use href="#wave" style="--la:.10526315789473684;--lo:.3157894736842105"/>
+    <use href="#wave" style="--la:.10526315789473684;--lo:.3684210526315789"/>
+    <use href="#wave" style="--la:.10526315789473684;--lo:.42105263157894735"/>
+    <use href="#wave" style="--la:.10526315789473684;--lo:.47368421052631576"/>
+    <use href="#wave" style="--la:.10526315789473684;--lo:.5263157894736842"/>
+    <use href="#wave" style="--la:.10526315789473684;--lo:.5789473684210527"/>
+    <use href="#wave" style="--la:.10526315789473684;--lo:.631578947368421"/>
+    <use href="#wave" style="--la:.10526315789473684;--lo:.6842105263157895"/>
+    <use href="#wave" style="--la:.10526315789473684;--lo:.7368421052631579"/>
+    <use href="#wave" style="--la:.10526315789473684;--lo:.7894736842105263"/>
+    <use href="#wave" style="--la:.10526315789473684;--lo:.8421052631578947"/>
+    <use href="#wave" style="--la:.10526315789473684;--lo:.8947368421052632"/>
+    <use href="#wave" style="--la:.10526315789473684;--lo:.9473684210526315"/>
+    <use href="#wave" style="--la:.10526315789473684;--lo:1"/>
+    <use href="#wave" style="--la:.15789473684210525;--lo:0"/>
+    <use href="#wave" style="--la:.15789473684210525;--lo:.05263157894736842"/>
+    <use href="#wave" style="--la:.15789473684210525;--lo:.10526315789473684"/>
+    <use href="#wave" style="--la:.15789473684210525;--lo:.15789473684210525"/>
+    <use href="#wave" style="--la:.15789473684210525;--lo:.21052631578947367"/>
+    <use href="#wave" style="--la:.15789473684210525;--lo:.2631578947368421"/>
+    <use href="#wave" style="--la:.15789473684210525;--lo:.3157894736842105"/>
+    <use href="#wave" style="--la:.15789473684210525;--lo:.3684210526315789"/>
+    <use href="#wave" style="--la:.15789473684210525;--lo:.42105263157894735"/>
+    <use href="#wave" style="--la:.15789473684210525;--lo:.47368421052631576"/>
+    <use href="#wave" style="--la:.15789473684210525;--lo:.5263157894736842"/>
+    <use href="#wave" style="--la:.15789473684210525;--lo:.5789473684210527"/>
+    <use href="#wave" style="--la:.15789473684210525;--lo:.631578947368421"/>
+    <use href="#wave" style="--la:.15789473684210525;--lo:.6842105263157895"/>
+    <use href="#wave" style="--la:.15789473684210525;--lo:.7368421052631579"/>
+    <use href="#wave" style="--la:.15789473684210525;--lo:.7894736842105263"/>
+    <use href="#wave" style="--la:.15789473684210525;--lo:.8421052631578947"/>
+    <use href="#wave" style="--la:.15789473684210525;--lo:.8947368421052632"/>
+    <use href="#wave" style="--la:.15789473684210525;--lo:.9473684210526315"/>
+    <use href="#wave" style="--la:.15789473684210525;--lo:1"/>
+    <use href="#wave" style="--la:.21052631578947367;--lo:0"/>
+    <use href="#wave" style="--la:.21052631578947367;--lo:.05263157894736842"/>
+    <use href="#wave" style="--la:.21052631578947367;--lo:.10526315789473684"/>
+    <use href="#wave" style="--la:.21052631578947367;--lo:.15789473684210525"/>
+    <use href="#wave" style="--la:.21052631578947367;--lo:.21052631578947367"/>
+    <use href="#wave" style="--la:.21052631578947367;--lo:.2631578947368421"/>
+    <use href="#wave" style="--la:.21052631578947367;--lo:.3157894736842105"/>
+    <use href="#wave" style="--la:.21052631578947367;--lo:.3684210526315789"/>
+    <use href="#wave" style="--la:.21052631578947367;--lo:.42105263157894735"/>
+    <use href="#wave" style="--la:.21052631578947367;--lo:.47368421052631576"/>
+    <use href="#wave" style="--la:.21052631578947367;--lo:.5263157894736842"/>
+    <use href="#wave" style="--la:.21052631578947367;--lo:.5789473684210527"/>
+    <use href="#wave" style="--la:.21052631578947367;--lo:.631578947368421"/>
+    <use href="#wave" style="--la:.21052631578947367;--lo:.6842105263157895"/>
+    <use href="#wave" style="--la:.21052631578947367;--lo:.7368421052631579"/>
+    <use href="#wave" style="--la:.21052631578947367;--lo:.7894736842105263"/>
+    <use href="#wave" style="--la:.21052631578947367;--lo:.8421052631578947"/>
+    <use href="#wave" style="--la:.21052631578947367;--lo:.8947368421052632"/>
+    <use href="#wave" style="--la:.21052631578947367;--lo:.9473684210526315"/>
+    <use href="#wave" style="--la:.21052631578947367;--lo:1"/>
+    <use href="#wave" style="--la:.2631578947368421;--lo:0"/>
+    <use href="#wave" style="--la:.2631578947368421;--lo:.05263157894736842"/>
+    <use href="#wave" style="--la:.2631578947368421;--lo:.10526315789473684"/>
+    <use href="#wave" style="--la:.2631578947368421;--lo:.15789473684210525"/>
+    <use href="#wave" style="--la:.2631578947368421;--lo:.21052631578947367"/>
+    <use href="#wave" style="--la:.2631578947368421;--lo:.2631578947368421"/>
+    <use href="#wave" style="--la:.2631578947368421;--lo:.3157894736842105"/>
+    <use href="#wave" style="--la:.2631578947368421;--lo:.3684210526315789"/>
+    <use href="#wave" style="--la:.2631578947368421;--lo:.42105263157894735"/>
+    <use href="#wave" style="--la:.2631578947368421;--lo:.47368421052631576"/>
+    <use href="#wave" style="--la:.2631578947368421;--lo:.5263157894736842"/>
+    <use href="#wave" style="--la:.2631578947368421;--lo:.5789473684210527"/>
+    <use href="#wave" style="--la:.2631578947368421;--lo:.631578947368421"/>
+    <use href="#wave" style="--la:.2631578947368421;--lo:.6842105263157895"/>
+    <use href="#wave" style="--la:.2631578947368421;--lo:.7368421052631579"/>
+    <use href="#wave" style="--la:.2631578947368421;--lo:.7894736842105263"/>
+    <use href="#wave" style="--la:.2631578947368421;--lo:.8421052631578947"/>
+    <use href="#wave" style="--la:.2631578947368421;--lo:.8947368421052632"/>
+    <use href="#wave" style="--la:.2631578947368421;--lo:.9473684210526315"/>
+    <use href="#wave" style="--la:.2631578947368421;--lo:1"/>
+    <use href="#wave" style="--la:.3157894736842105;--lo:0"/>
+    <use href="#wave" style="--la:.3157894736842105;--lo:.05263157894736842"/>
+    <use href="#wave" style="--la:.3157894736842105;--lo:.10526315789473684"/>
+    <use href="#wave" style="--la:.3157894736842105;--lo:.15789473684210525"/>
+    <use href="#wave" style="--la:.3157894736842105;--lo:.21052631578947367"/>
+    <use href="#wave" style="--la:.3157894736842105;--lo:.2631578947368421"/>
+    <use href="#wave" style="--la:.3157894736842105;--lo:.3157894736842105"/>
+    <use href="#wave" style="--la:.3157894736842105;--lo:.3684210526315789"/>
+    <use href="#wave" style="--la:.3157894736842105;--lo:.42105263157894735"/>
+    <use href="#wave" style="--la:.3157894736842105;--lo:.47368421052631576"/>
+    <use href="#wave" style="--la:.3157894736842105;--lo:.5263157894736842"/>
+    <use href="#wave" style="--la:.3157894736842105;--lo:.5789473684210527"/>
+    <use href="#wave" style="--la:.3157894736842105;--lo:.631578947368421"/>
+    <use href="#wave" style="--la:.3157894736842105;--lo:.6842105263157895"/>
+    <use href="#wave" style="--la:.3157894736842105;--lo:.7368421052631579"/>
+    <use href="#wave" style="--la:.3157894736842105;--lo:.7894736842105263"/>
+    <use href="#wave" style="--la:.3157894736842105;--lo:.8421052631578947"/>
+    <use href="#wave" style="--la:.3157894736842105;--lo:.8947368421052632"/>
+    <use href="#wave" style="--la:.3157894736842105;--lo:.9473684210526315"/>
+    <use href="#wave" style="--la:.3157894736842105;--lo:1"/>
+    <use href="#wave" style="--la:.3684210526315789;--lo:0"/>
+    <use href="#wave" style="--la:.3684210526315789;--lo:.05263157894736842"/>
+    <use href="#wave" style="--la:.3684210526315789;--lo:.10526315789473684"/>
+    <use href="#wave" style="--la:.3684210526315789;--lo:.15789473684210525"/>
+    <use href="#wave" style="--la:.3684210526315789;--lo:.21052631578947367"/>
+    <use href="#wave" style="--la:.3684210526315789;--lo:.2631578947368421"/>
+    <use href="#wave" style="--la:.3684210526315789;--lo:.3157894736842105"/>
+    <use href="#wave" style="--la:.3684210526315789;--lo:.3684210526315789"/>
+    <use href="#wave" style="--la:.3684210526315789;--lo:.42105263157894735"/>
+    <use href="#wave" style="--la:.3684210526315789;--lo:.47368421052631576"/>
+    <use href="#wave" style="--la:.3684210526315789;--lo:.5263157894736842"/>
+    <use href="#wave" style="--la:.3684210526315789;--lo:.5789473684210527"/>
+    <use href="#wave" style="--la:.3684210526315789;--lo:.631578947368421"/>
+    <use href="#wave" style="--la:.3684210526315789;--lo:.6842105263157895"/>
+    <use href="#wave" style="--la:.3684210526315789;--lo:.7368421052631579"/>
+    <use href="#wave" style="--la:.3684210526315789;--lo:.7894736842105263"/>
+    <use href="#wave" style="--la:.3684210526315789;--lo:.8421052631578947"/>
+    <use href="#wave" style="--la:.3684210526315789;--lo:.8947368421052632"/>
+    <use href="#wave" style="--la:.3684210526315789;--lo:.9473684210526315"/>
+    <use href="#wave" style="--la:.3684210526315789;--lo:1"/>
+    <use href="#wave" style="--la:.42105263157894735;--lo:0"/>
+    <use href="#wave" style="--la:.42105263157894735;--lo:.05263157894736842"/>
+    <use href="#wave" style="--la:.42105263157894735;--lo:.10526315789473684"/>
+    <use href="#wave" style="--la:.42105263157894735;--lo:.15789473684210525"/>
+    <use href="#wave" style="--la:.42105263157894735;--lo:.21052631578947367"/>
+    <use href="#wave" style="--la:.42105263157894735;--lo:.2631578947368421"/>
+    <use href="#wave" style="--la:.42105263157894735;--lo:.3157894736842105"/>
+    <use href="#wave" style="--la:.42105263157894735;--lo:.3684210526315789"/>
+    <use href="#wave" style="--la:.42105263157894735;--lo:.42105263157894735"/>
+    <use href="#wave" style="--la:.42105263157894735;--lo:.47368421052631576"/>
+    <use href="#wave" style="--la:.42105263157894735;--lo:.5263157894736842"/>
+    <use href="#wave" style="--la:.42105263157894735;--lo:.5789473684210527"/>
+    <use href="#wave" style="--la:.42105263157894735;--lo:.631578947368421"/>
+    <use href="#wave" style="--la:.42105263157894735;--lo:.6842105263157895"/>
+    <use href="#wave" style="--la:.42105263157894735;--lo:.7368421052631579"/>
+    <use href="#wave" style="--la:.42105263157894735;--lo:.7894736842105263"/>
+    <use href="#wave" style="--la:.42105263157894735;--lo:.8421052631578947"/>
+    <use href="#wave" style="--la:.42105263157894735;--lo:.8947368421052632"/>
+    <use href="#wave" style="--la:.42105263157894735;--lo:.9473684210526315"/>
+    <use href="#wave" style="--la:.42105263157894735;--lo:1"/>
+    <use href="#wave" style="--la:.47368421052631576;--lo:0"/>
+    <use href="#wave" style="--la:.47368421052631576;--lo:.05263157894736842"/>
+    <use href="#wave" style="--la:.47368421052631576;--lo:.10526315789473684"/>
+    <use href="#wave" style="--la:.47368421052631576;--lo:.15789473684210525"/>
+    <use href="#wave" style="--la:.47368421052631576;--lo:.21052631578947367"/>
+    <use href="#wave" style="--la:.47368421052631576;--lo:.2631578947368421"/>
+    <use href="#wave" style="--la:.47368421052631576;--lo:.3157894736842105"/>
+    <use href="#wave" style="--la:.47368421052631576;--lo:.3684210526315789"/>
+    <use href="#wave" style="--la:.47368421052631576;--lo:.42105263157894735"/>
+    <use href="#wave" style="--la:.47368421052631576;--lo:.47368421052631576"/>
+    <use href="#wave" style="--la:.47368421052631576;--lo:.5263157894736842"/>
+    <use href="#wave" style="--la:.47368421052631576;--lo:.5789473684210527"/>
+    <use href="#wave" style="--la:.47368421052631576;--lo:.631578947368421"/>
+    <use href="#wave" style="--la:.47368421052631576;--lo:.6842105263157895"/>
+    <use href="#wave" style="--la:.47368421052631576;--lo:.7368421052631579"/>
+    <use href="#wave" style="--la:.47368421052631576;--lo:.7894736842105263"/>
+    <use href="#wave" style="--la:.47368421052631576;--lo:.8421052631578947"/>
+    <use href="#wave" style="--la:.47368421052631576;--lo:.8947368421052632"/>
+    <use href="#wave" style="--la:.47368421052631576;--lo:.9473684210526315"/>
+    <use href="#wave" style="--la:.47368421052631576;--lo:1"/>
+    <use href="#wave" style="--la:.5263157894736842;--lo:0"/>
+    <use href="#wave" style="--la:.5263157894736842;--lo:.05263157894736842"/>
+    <use href="#wave" style="--la:.5263157894736842;--lo:.10526315789473684"/>
+    <use href="#wave" style="--la:.5263157894736842;--lo:.15789473684210525"/>
+    <use href="#wave" style="--la:.5263157894736842;--lo:.21052631578947367"/>
+    <use href="#wave" style="--la:.5263157894736842;--lo:.2631578947368421"/>
+    <use href="#wave" style="--la:.5263157894736842;--lo:.3157894736842105"/>
+    <use href="#wave" style="--la:.5263157894736842;--lo:.3684210526315789"/>
+    <use href="#wave" style="--la:.5263157894736842;--lo:.42105263157894735"/>
+    <use href="#wave" style="--la:.5263157894736842;--lo:.47368421052631576"/>
+    <use href="#wave" style="--la:.5263157894736842;--lo:.5263157894736842"/>
+    <use href="#wave" style="--la:.5263157894736842;--lo:.5789473684210527"/>
+    <use href="#wave" style="--la:.5263157894736842;--lo:.631578947368421"/>
+    <use href="#wave" style="--la:.5263157894736842;--lo:.6842105263157895"/>
+    <use href="#wave" style="--la:.5263157894736842;--lo:.7368421052631579"/>
+    <use href="#wave" style="--la:.5263157894736842;--lo:.7894736842105263"/>
+    <use href="#wave" style="--la:.5263157894736842;--lo:.8421052631578947"/>
+    <use href="#wave" style="--la:.5263157894736842;--lo:.8947368421052632"/>
+    <use href="#wave" style="--la:.5263157894736842;--lo:.9473684210526315"/>
+    <use href="#wave" style="--la:.5263157894736842;--lo:1"/>
+    <use href="#wave" style="--la:.5789473684210527;--lo:0"/>
+    <use href="#wave" style="--la:.5789473684210527;--lo:.05263157894736842"/>
+    <use href="#wave" style="--la:.5789473684210527;--lo:.10526315789473684"/>
+    <use href="#wave" style="--la:.5789473684210527;--lo:.15789473684210525"/>
+    <use href="#wave" style="--la:.5789473684210527;--lo:.21052631578947367"/>
+    <use href="#wave" style="--la:.5789473684210527;--lo:.2631578947368421"/>
+    <use href="#wave" style="--la:.5789473684210527;--lo:.3157894736842105"/>
+    <use href="#wave" style="--la:.5789473684210527;--lo:.3684210526315789"/>
+    <use href="#wave" style="--la:.5789473684210527;--lo:.42105263157894735"/>
+    <use href="#wave" style="--la:.5789473684210527;--lo:.47368421052631576"/>
+    <use href="#wave" style="--la:.5789473684210527;--lo:.5263157894736842"/>
+    <use href="#wave" style="--la:.5789473684210527;--lo:.5789473684210527"/>
+    <use href="#wave" style="--la:.5789473684210527;--lo:.631578947368421"/>
+    <use href="#wave" style="--la:.5789473684210527;--lo:.6842105263157895"/>
+    <use href="#wave" style="--la:.5789473684210527;--lo:.7368421052631579"/>
+    <use href="#wave" style="--la:.5789473684210527;--lo:.7894736842105263"/>
+    <use href="#wave" style="--la:.5789473684210527;--lo:.8421052631578947"/>
+    <use href="#wave" style="--la:.5789473684210527;--lo:.8947368421052632"/>
+    <use href="#wave" style="--la:.5789473684210527;--lo:.9473684210526315"/>
+    <use href="#wave" style="--la:.5789473684210527;--lo:1"/>
+    <use href="#wave" style="--la:.631578947368421;--lo:0"/>
+    <use href="#wave" style="--la:.631578947368421;--lo:.05263157894736842"/>
+    <use href="#wave" style="--la:.631578947368421;--lo:.10526315789473684"/>
+    <use href="#wave" style="--la:.631578947368421;--lo:.15789473684210525"/>
+    <use href="#wave" style="--la:.631578947368421;--lo:.21052631578947367"/>
+    <use href="#wave" style="--la:.631578947368421;--lo:.2631578947368421"/>
+    <use href="#wave" style="--la:.631578947368421;--lo:.3157894736842105"/>
+    <use href="#wave" style="--la:.631578947368421;--lo:.3684210526315789"/>
+    <use href="#wave" style="--la:.631578947368421;--lo:.42105263157894735"/>
+    <use href="#wave" style="--la:.631578947368421;--lo:.47368421052631576"/>
+    <use href="#wave" style="--la:.631578947368421;--lo:.5263157894736842"/>
+    <use href="#wave" style="--la:.631578947368421;--lo:.5789473684210527"/>
+    <use href="#wave" style="--la:.631578947368421;--lo:.631578947368421"/>
+    <use href="#wave" style="--la:.631578947368421;--lo:.6842105263157895"/>
+    <use href="#wave" style="--la:.631578947368421;--lo:.7368421052631579"/>
+    <use href="#wave" style="--la:.631578947368421;--lo:.7894736842105263"/>
+    <use href="#wave" style="--la:.631578947368421;--lo:.8421052631578947"/>
+    <use href="#wave" style="--la:.631578947368421;--lo:.8947368421052632"/>
+    <use href="#wave" style="--la:.631578947368421;--lo:.9473684210526315"/>
+    <use href="#wave" style="--la:.631578947368421;--lo:1"/>
+    <use href="#wave" style="--la:.6842105263157895;--lo:0"/>
+    <use href="#wave" style="--la:.6842105263157895;--lo:.05263157894736842"/>
+    <use href="#wave" style="--la:.6842105263157895;--lo:.10526315789473684"/>
+    <use href="#wave" style="--la:.6842105263157895;--lo:.15789473684210525"/>
+    <use href="#wave" style="--la:.6842105263157895;--lo:.21052631578947367"/>
+    <use href="#wave" style="--la:.6842105263157895;--lo:.2631578947368421"/>
+    <use href="#wave" style="--la:.6842105263157895;--lo:.3157894736842105"/>
+    <use href="#wave" style="--la:.6842105263157895;--lo:.3684210526315789"/>
+    <use href="#wave" style="--la:.6842105263157895;--lo:.42105263157894735"/>
+    <use href="#wave" style="--la:.6842105263157895;--lo:.47368421052631576"/>
+    <use href="#wave" style="--la:.6842105263157895;--lo:.5263157894736842"/>
+    <use href="#wave" style="--la:.6842105263157895;--lo:.5789473684210527"/>
+    <use href="#wave" style="--la:.6842105263157895;--lo:.631578947368421"/>
+    <use href="#wave" style="--la:.6842105263157895;--lo:.6842105263157895"/>
+    <use href="#wave" style="--la:.6842105263157895;--lo:.7368421052631579"/>
+    <use href="#wave" style="--la:.6842105263157895;--lo:.7894736842105263"/>
+    <use href="#wave" style="--la:.6842105263157895;--lo:.8421052631578947"/>
+    <use href="#wave" style="--la:.6842105263157895;--lo:.8947368421052632"/>
+    <use href="#wave" style="--la:.6842105263157895;--lo:.9473684210526315"/>
+    <use href="#wave" style="--la:.6842105263157895;--lo:1"/>
+    <use href="#wave" style="--la:.7368421052631579;--lo:0"/>
+    <use href="#wave" style="--la:.7368421052631579;--lo:.05263157894736842"/>
+    <use href="#wave" style="--la:.7368421052631579;--lo:.10526315789473684"/>
+    <use href="#wave" style="--la:.7368421052631579;--lo:.15789473684210525"/>
+    <use href="#wave" style="--la:.7368421052631579;--lo:.21052631578947367"/>
+    <use href="#wave" style="--la:.7368421052631579;--lo:.2631578947368421"/>
+    <use href="#wave" style="--la:.7368421052631579;--lo:.3157894736842105"/>
+    <use href="#wave" style="--la:.7368421052631579;--lo:.3684210526315789"/>
+    <use href="#wave" style="--la:.7368421052631579;--lo:.42105263157894735"/>
+    <use href="#wave" style="--la:.7368421052631579;--lo:.47368421052631576"/>
+    <use href="#wave" style="--la:.7368421052631579;--lo:.5263157894736842"/>
+    <use href="#wave" style="--la:.7368421052631579;--lo:.5789473684210527"/>
+    <use href="#wave" style="--la:.7368421052631579;--lo:.631578947368421"/>
+    <use href="#wave" style="--la:.7368421052631579;--lo:.6842105263157895"/>
+    <use href="#wave" style="--la:.7368421052631579;--lo:.7368421052631579"/>
+    <use href="#wave" style="--la:.7368421052631579;--lo:.7894736842105263"/>
+    <use href="#wave" style="--la:.7368421052631579;--lo:.8421052631578947"/>
+    <use href="#wave" style="--la:.7368421052631579;--lo:.8947368421052632"/>
+    <use href="#wave" style="--la:.7368421052631579;--lo:.9473684210526315"/>
+    <use href="#wave" style="--la:.7368421052631579;--lo:1"/>
+    <use href="#wave" style="--la:.7894736842105263;--lo:0"/>
+    <use href="#wave" style="--la:.7894736842105263;--lo:.05263157894736842"/>
+    <use href="#wave" style="--la:.7894736842105263;--lo:.10526315789473684"/>
+    <use href="#wave" style="--la:.7894736842105263;--lo:.15789473684210525"/>
+    <use href="#wave" style="--la:.7894736842105263;--lo:.21052631578947367"/>
+    <use href="#wave" style="--la:.7894736842105263;--lo:.2631578947368421"/>
+    <use href="#wave" style="--la:.7894736842105263;--lo:.3157894736842105"/>
+    <use href="#wave" style="--la:.7894736842105263;--lo:.3684210526315789"/>
+    <use href="#wave" style="--la:.7894736842105263;--lo:.42105263157894735"/>
+    <use href="#wave" style="--la:.7894736842105263;--lo:.47368421052631576"/>
+    <use href="#wave" style="--la:.7894736842105263;--lo:.5263157894736842"/>
+    <use href="#wave" style="--la:.7894736842105263;--lo:.5789473684210527"/>
+    <use href="#wave" style="--la:.7894736842105263;--lo:.631578947368421"/>
+    <use href="#wave" style="--la:.7894736842105263;--lo:.6842105263157895"/>
+    <use href="#wave" style="--la:.7894736842105263;--lo:.7368421052631579"/>
+    <use href="#wave" style="--la:.7894736842105263;--lo:.7894736842105263"/>
+    <use href="#wave" style="--la:.7894736842105263;--lo:.8421052631578947"/>
+    <use href="#wave" style="--la:.7894736842105263;--lo:.8947368421052632"/>
+    <use href="#wave" style="--la:.7894736842105263;--lo:.9473684210526315"/>
+    <use href="#wave" style="--la:.7894736842105263;--lo:1"/>
+    <use href="#wave" style="--la:.8421052631578947;--lo:0"/>
+    <use href="#wave" style="--la:.8421052631578947;--lo:.05263157894736842"/>
+    <use href="#wave" style="--la:.8421052631578947;--lo:.10526315789473684"/>
+    <use href="#wave" style="--la:.8421052631578947;--lo:.15789473684210525"/>
+    <use href="#wave" style="--la:.8421052631578947;--lo:.21052631578947367"/>
+    <use href="#wave" style="--la:.8421052631578947;--lo:.2631578947368421"/>
+    <use href="#wave" style="--la:.8421052631578947;--lo:.3157894736842105"/>
+    <use href="#wave" style="--la:.8421052631578947;--lo:.3684210526315789"/>
+    <use href="#wave" style="--la:.8421052631578947;--lo:.42105263157894735"/>
+    <use href="#wave" style="--la:.8421052631578947;--lo:.47368421052631576"/>
+    <use href="#wave" style="--la:.8421052631578947;--lo:.5263157894736842"/>
+    <use href="#wave" style="--la:.8421052631578947;--lo:.5789473684210527"/>
+    <use href="#wave" style="--la:.8421052631578947;--lo:.631578947368421"/>
+    <use href="#wave" style="--la:.8421052631578947;--lo:.6842105263157895"/>
+    <use href="#wave" style="--la:.8421052631578947;--lo:.7368421052631579"/>
+    <use href="#wave" style="--la:.8421052631578947;--lo:.7894736842105263"/>
+    <use href="#wave" style="--la:.8421052631578947;--lo:.8421052631578947"/>
+    <use href="#wave" style="--la:.8421052631578947;--lo:.8947368421052632"/>
+    <use href="#wave" style="--la:.8421052631578947;--lo:.9473684210526315"/>
+    <use href="#wave" style="--la:.8421052631578947;--lo:1"/>
+    <use href="#wave" style="--la:.8947368421052632;--lo:0"/>
+    <use href="#wave" style="--la:.8947368421052632;--lo:.05263157894736842"/>
+    <use href="#wave" style="--la:.8947368421052632;--lo:.10526315789473684"/>
+    <use href="#wave" style="--la:.8947368421052632;--lo:.15789473684210525"/>
+    <use href="#wave" style="--la:.8947368421052632;--lo:.21052631578947367"/>
+    <use href="#wave" style="--la:.8947368421052632;--lo:.2631578947368421"/>
+    <use href="#wave" style="--la:.8947368421052632;--lo:.3157894736842105"/>
+    <use href="#wave" style="--la:.8947368421052632;--lo:.3684210526315789"/>
+    <use href="#wave" style="--la:.8947368421052632;--lo:.42105263157894735"/>
+    <use href="#wave" style="--la:.8947368421052632;--lo:.47368421052631576"/>
+    <use href="#wave" style="--la:.8947368421052632;--lo:.5263157894736842"/>
+    <use href="#wave" style="--la:.8947368421052632;--lo:.5789473684210527"/>
+    <use href="#wave" style="--la:.8947368421052632;--lo:.631578947368421"/>
+    <use href="#wave" style="--la:.8947368421052632;--lo:.6842105263157895"/>
+    <use href="#wave" style="--la:.8947368421052632;--lo:.7368421052631579"/>
+    <use href="#wave" style="--la:.8947368421052632;--lo:.7894736842105263"/>
+    <use href="#wave" style="--la:.8947368421052632;--lo:.8421052631578947"/>
+    <use href="#wave" style="--la:.8947368421052632;--lo:.8947368421052632"/>
+    <use href="#wave" style="--la:.8947368421052632;--lo:.9473684210526315"/>
+    <use href="#wave" style="--la:.8947368421052632;--lo:1"/>
+    <use href="#wave" style="--la:.9473684210526315;--lo:0"/>
+    <use href="#wave" style="--la:.9473684210526315;--lo:.05263157894736842"/>
+    <use href="#wave" style="--la:.9473684210526315;--lo:.10526315789473684"/>
+    <use href="#wave" style="--la:.9473684210526315;--lo:.15789473684210525"/>
+    <use href="#wave" style="--la:.9473684210526315;--lo:.21052631578947367"/>
+    <use href="#wave" style="--la:.9473684210526315;--lo:.2631578947368421"/>
+    <use href="#wave" style="--la:.9473684210526315;--lo:.3157894736842105"/>
+    <use href="#wave" style="--la:.9473684210526315;--lo:.3684210526315789"/>
+    <use href="#wave" style="--la:.9473684210526315;--lo:.42105263157894735"/>
+    <use href="#wave" style="--la:.9473684210526315;--lo:.47368421052631576"/>
+    <use href="#wave" style="--la:.9473684210526315;--lo:.5263157894736842"/>
+    <use href="#wave" style="--la:.9473684210526315;--lo:.5789473684210527"/>
+    <use href="#wave" style="--la:.9473684210526315;--lo:.631578947368421"/>
+    <use href="#wave" style="--la:.9473684210526315;--lo:.6842105263157895"/>
+    <use href="#wave" style="--la:.9473684210526315;--lo:.7368421052631579"/>
+    <use href="#wave" style="--la:.9473684210526315;--lo:.7894736842105263"/>
+    <use href="#wave" style="--la:.9473684210526315;--lo:.8421052631578947"/>
+    <use href="#wave" style="--la:.9473684210526315;--lo:.8947368421052632"/>
+    <use href="#wave" style="--la:.9473684210526315;--lo:.9473684210526315"/>
+    <use href="#wave" style="--la:.9473684210526315;--lo:1"/>
+    <use href="#wave" style="--la:1;--lo:0"/>
+    <use href="#wave" style="--la:1;--lo:.05263157894736842"/>
+    <use href="#wave" style="--la:1;--lo:.10526315789473684"/>
+    <use href="#wave" style="--la:1;--lo:.15789473684210525"/>
+    <use href="#wave" style="--la:1;--lo:.21052631578947367"/>
+    <use href="#wave" style="--la:1;--lo:.2631578947368421"/>
+    <use href="#wave" style="--la:1;--lo:.3157894736842105"/>
+    <use href="#wave" style="--la:1;--lo:.3684210526315789"/>
+    <use href="#wave" style="--la:1;--lo:.42105263157894735"/>
+    <use href="#wave" style="--la:1;--lo:.47368421052631576"/>
+    <use href="#wave" style="--la:1;--lo:.5263157894736842"/>
+    <use href="#wave" style="--la:1;--lo:.5789473684210527"/>
+    <use href="#wave" style="--la:1;--lo:.631578947368421"/>
+    <use href="#wave" style="--la:1;--lo:.6842105263157895"/>
+    <use href="#wave" style="--la:1;--lo:.7368421052631579"/>
+    <use href="#wave" style="--la:1;--lo:.7894736842105263"/>
+    <use href="#wave" style="--la:1;--lo:.8421052631578947"/>
+    <use href="#wave" style="--la:1;--lo:.8947368421052632"/>
+    <use href="#wave" style="--la:1;--lo:.9473684210526315"/>
+    <use href="#wave" style="--la:1;--lo:1"/>
+  </g>
+</svg>
