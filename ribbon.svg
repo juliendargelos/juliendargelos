@@ -12,12 +12,6 @@
       initial-value: 0;
     }
 
-    @property --weight-factor {
-      syntax: "<number>";
-      inherits: true;
-      initial-value: 0;
-    }
-
     g {
       --size-x: 11px;
       --size-y: 6px;
@@ -27,9 +21,8 @@
       --radius-y: 35px;
       --weight-min: 15px;
       --weight-max: 30px;
-      --weight-factor: 1;
       --pi2: 6.2831853072;
-      animation: rotate 30s infinite linear, weight 2s infinite alternate ease-in-out;
+      animation: rotate 30s infinite linear;
     }
 
     use {
@@ -41,17 +34,17 @@
           calc(
             var(--cos) * var(--radius-x) +
             (var(--viewport-x) - var(--size-x)) / 2
-        ),
-        calc(
-          var(--sin) * var(--radius-y) +
-          (var(--viewport-y) - var(--size-y)) / 2 + (
-            (var(--h) * var(--weight-min) * (1 - (var(--sin) + 1) / 2)) +
-            (var(--h) * var(--weight-max) * (var(--sin) + 1) / 2)
-          ) * (
-            (var(--sin-wave) + 1) / 2 * 0.5 + 0.5
-          )
-        ),
-        0
+          ),
+          calc(
+            var(--sin) * var(--radius-y) +
+            (var(--viewport-y) - var(--size-y)) / 2 + (
+              (var(--h) * var(--weight-min) * (1 - (var(--sin) + 1) / 2)) +
+              (var(--h) * var(--weight-max) * (var(--sin) + 1) / 2)
+            ) * (
+              (var(--sin-wave) + 1) / 2 * 0.5 + 0.5
+            )
+          ),
+          0
         )
         scale(calc((var(--sin) + 1) / 2 * 0.5 + 0.5));
     }
@@ -63,16 +56,6 @@
 
       to {
         --progress: 1;
-      }
-    }
-
-    @keyframes weight {
-      from {
-        --weight-factor: 0.75;
-      }
-
-      to {
-        --weight-factor: 1.15;
       }
     }
     /* ]]> */
