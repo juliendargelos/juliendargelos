@@ -1,3 +1,3 @@
 <p align="center">
-  <img alt="Sphere" src="sphere.svg">
+  <img alt="Ribbon" src="ribbon.svg">
 </p>
